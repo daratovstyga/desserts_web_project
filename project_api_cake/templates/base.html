@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css"/>
+    <script type="text/javascript"
+            src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=3zooRgKiO4OG-umbYq9oe-Bp3dryPbBCjfMFXxyCsL96g_ULFcDQbZNy-dtijg7UhgfvJD5kOfOzuaCIYgAfcQjtZWoio7W2ZU675ibLfwnGC82DvaJSmonf5KVQ-76Me5zy4danRKDwCBLKvLmeZQ"
+            charset="UTF-8"></script>
+    <title>Главная страница</title>
+</head>
+<body>
+<header style="background-color:#f0d0e1">
+    <a href="sample.html"><img src="https://www.clipartmax.com/png/full/254-2540022_cupcake-cupcake-clipart-black-and-white.png" width="70"
+                               height="80" style="margin-top:10px; margin-left:10px"></a>
+    {% if current_user.is_authenticated %}
+    <a href="/logout"><button style="font-family:Georgia, serif;border-radius: 5px; background: #fff0f5; margin-left: 20px; color: #BD5189; border-color:#BD5189;">{{ current_user.name }} {{ current_user.surname }}</button></a>
+    <a href="/account/{{current_user.id}}"><button style="font-family:Georgia, serif;border-radius: 5px; background: #fff0f5; color: #BD5189; border-color: #BD5189;">Личный кабинет</button></a>
+    {% else %}
+    <a href="/register"><button style="font-family:Georgia, serif;border-radius: 5px; background: #fff0f5; margin-left: 20px; color: #BD5189; border-color: #BD5189;">Регистрация</button></a>
+    <a href="/login"><button style="font-family:Georgia, serif;border-radius: 5px; background: #fff0f5; color: #BD5189; border-color: #BD5189;">Вход</button></a>
+
+    {% endif %}
+    <a href="sample.html"><img src="https://xn----7sbgab0c0adahmnfij0k.xn--p1ai/img/instagram.png" width="50"
+                               height="50" style="margin-left:65%;"></a>
+    <a href="sample.html"><img src="https://domini-pizza.ru/data/vklogo.png" width="50" height="50"
+                               style="margin-left:8px;"></a>
+    <div style="margin-left:80%; font-family:Georgia, serif; color:#212121;">+7-800-000-00-00</div>
+</header>
+
+<nav class="navbar navbar-expand-lg"
+     style="background-color:#e0a3c3; height:30px; width:100%; font-family:century schoolbook; font-size:25px; color:#9b2261">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/main_window" style="color:#9b2261">Главная</a> |
+        <a class="navbar-brand" href="/stocks" style="color:#9b2261">Акции</a> |
+        <a class="navbar-brand" href="/catalog" style="color:#9b2261">Каталог</a> |
+        <a class="navbar-brand" href="/contacts" style="color:#9b2261">Контакты</a>
+    </div>
+</nav>
+{% block content %}{% endblock %}
+<header style="background-color:#f0d0e1; font-family:Georgia, serif; color:#212121;">
+    <img src="https://www.pinclipart.com/picdir/big/579-5790258_location-logo-png-hd-images-location-logo-png.png"
+         width="34px" height="40px" style="margin-left:10px; margin-top:10px;">
+    <a>Адрес: ул. Ленина, 50</a>
+    <a style="margin-left:28%">Часы работы: 8:00 - 20:00</a>
+    <a style="margin-left:18%">Контакты: +7-800-000-00-00</a>
+</header>
+</body>
+</html>

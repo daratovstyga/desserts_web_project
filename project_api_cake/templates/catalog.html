@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for type in products.keys()%}
+<a class="navbar-brand"
+   style="font-family:Monotype Corsiva; color:#9b2261; margin-top: 20px; margin-bottom: 20px; margin-left: 35px">{{type}}</a>
+<div class="row" style="margin-left:20px;">
+    {% for value in products[type]%}
+    <div class="col-sm">
+        <div class="card" style="width: 18rem; height: 31rem;">
+            <img src="{{value.img}}"
+                 class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{value.name}}</h5>
+                <p class="card-text">{{value.description}}</p>
+                <a href="/one_item/{{value.id}}" class="btn btn-primary"
+                   style="background-color:#e0a3c3; border:1px solid #d175a5">Выбрать</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endfor %}
+{% endblock %}

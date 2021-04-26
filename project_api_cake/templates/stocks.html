@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Акции</h2>
+<div class="row" style="margin-left:20px;">
+    {% for item in stocks%}
+    <div class="col-sm">
+        <div class="card" style="width: 18rem; height: 31rem;">
+            <img src="{{item.img}}"
+                 class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <p class="card-text">Мы дарим вам скидку {{item.discount}}%</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

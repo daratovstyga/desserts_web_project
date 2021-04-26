@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 style="font-family:Monotype Corsiva; color:#9b2261; margin-top: 20px; margin-bottom: 20px; margin-left: 35px;">
+    Личная информация</h2>
+<div style="font-family:Georgia, serif; color:#212121; margin-top: 20px; margin-bottom: 20px; margin-left: 50px; font-size: 18px;">
+    <div class="row">
+        <p style="font-weight: bold;">Фамилия: </p>
+        <p style="margin-left: 5px">{{user.surname}}</p>
+    </div>
+    <div class="row">
+        <p style="font-weight: bold;">Имя: </p>
+        <p style="margin-left: 5px">{{user.name}}</p>
+    </div>
+    <div class="row">
+        <p style="font-weight: bold;">Дата рождения: </p>
+        <p style="margin-left: 5px">{{user.birth_date}}</p>
+    </div>
+    <div class="row">
+        <p style="font-weight: bold;">Адресс: </p>
+        <p style="margin-left: 5px">{{user.address}}</p>
+    </div>
+    <div class="row">
+        <p style="font-weight: bold;">E-mail: </p>
+        <p style="margin-left: 5px">{{user.email}}</p>
+    </div>
+    <div class="row">
+        <p style="font-weight: bold;">Скидка: </p>
+        <p style="margin-left: 5px">{{user.discount}}%</p>
+    </div>
+</div>
+<h2 style="font-family:Monotype Corsiva; color:#9b2261; margin-top: 20px; margin-bottom: 20px; margin-left: 35px;">
+    Заказы</h2>
+<div class="column" style="margin-left:20px;">
+    {% for item in orders%}
+    <div class="col-sm">
+        <div class="card" style="width: 18rem; height: 31rem; margin-top: 15px; margin-bottom: 15px;">
+            <img src="{{item.name.img}}"
+                 class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{item.name.name}}</h5>
+                <p class="card-text">{{item.delivery_date}}</p>
+                <p class="card-text">{{item.name.price}} руб.</p>
+                {% if not item.is_taken %}
+                <a href="/account/{{user.id}}/order_delete/{{item.id}}" class="btn btn-primary"
+                   style="background-color:#e0a3c3; border:1px solid #d175a5">Удалить</a>
+                <a href="/account/{{user.id}}/edit_order/{{item.id}}" class="btn btn-primary"
+                   style="background-color:#e0a3c3; border:1px solid #d175a5">Изменить</a>
+                {% elif not item.rating %}
+                <a href="/account/{{user.id}}/rate_order/{{item.id}}" class="btn btn-primary"
+                   style="background-color:#e0a3c3; border:1px solid #d175a5">Оценить</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
