@@ -2,12 +2,12 @@
 
 {% block content %}
 {% for type in products.keys()%}
-<a class="navbar-brand"
-   style="font-family:Monotype Corsiva; color:#9b2261; margin-top: 20px; margin-bottom: 20px; margin-left: 35px">{{type}}</a>
+<h1 style="font-family:Georgia, serif; color:#9b2261; text-align: center; margin-top: 30px; margin-bottom: 20px;">{{type}}</h1>
+
 <div class="row" style="margin-left:20px;">
     {% for value in products[type]%}
-    <div class="col-sm">
-        <div class="card" style="width: 18rem; height: 31rem;">
+    <div class="col-sm" style="margin-bottom: 30px;">
+        <div class="card" style="width: 18rem; height: 34rem;">
             <img src="{{value.img}}"
                  class="card-img-top" alt="...">
             <div class="card-body">

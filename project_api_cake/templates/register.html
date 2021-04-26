@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Register Form</h1>
+<h1>Регистрация</h1>
 <form action="" method="post">
     {{ form.hidden_tag() }}
     <p>
@@ -67,7 +67,7 @@
             </p>
         {% endfor %}
     </p>
-    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+    <p>{{ form.submit(type="submit", class="btn btn-primary", style="background-color:#e0a3c3; border:1px solid #d175a5") }}</p>
     {{message}}
 </form>
 {% endblock %}

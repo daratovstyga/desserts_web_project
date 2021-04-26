@@ -1,37 +1,43 @@
 {% extends "base.html" %}
 {% block content %}
-<h2>Главные акции</h2>
 
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="d-block w-100" src="/static/img/img_1.jpg" alt="First slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="/static/img/img_2.jpg" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-            <img class="d-block w-100" src="/static/img/img_3.jpg" alt="Third slide">
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only"></span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only"></span>
-    </a>
+<div style="text-align: center;">
+    <h1 style="margin-top: 7%; color:#9b2261; font-family:century schoolbook; font-size: 70px;">Кондитерксое ателье "Мечта"</h1>
+    <h3 style="margin-top: 3%; color:#e0a3c3; font-family:century schoolbook;">Самые лучшие десерты в городе ждут Вас на полках нашего ателье!</h3>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+<div class="row" style="margin-left: 15%;">
+    <div class="col-sm-3" style="margin-top: 50px; margin-bottom: 50px;">
+        <div class="card" style="border: none; text-align: center;">
+            <div class="card-body">
+                <img src="https://bumper-stickers.ru/42455-thickbox_default/povar.jpg" width="100" height="100">
+                <h5 class="card-title" style="text-align: center; font-family:Georgia, serif; color:#212121;">В нащей команде работают высококвалифицированные кондитеры и радуют клиентов
+                    своими фирменными рецептами.</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3" style="margin-top: 50px; margin-bottom: 50px;">
+        <div class="card" style="border: none; text-align: center;" >
+            <div class="card-body">
+                <img src="https://cdn.onlinewebfonts.com/svg/img_498931.png" width="100" height="100">
+                <h5 class="card-title" style="text-align: center; font-family:Georgia, serif; color:#212121;">Мы работем на натуральных и качествеенных продуктах, потому что заботимся о
+                    здоровьи
+                    своих покупателей.</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3" style="margin-top: 50px; margin-bottom: 50px;">
+        <div class="card" style="border: none; text-align: center;">
+            <div class="card-body">
+                <img src="https://cdn.onlinewebfonts.com/svg/img_18630.png" width="100" height="100">
+
+                <h5 class="card-title" style="text-align: center; font-family:Georgia, serif; color:#212121;">Наше ателье славится разнообразием вкусов и начинок десертов, самыми новыми
+                    техниками
+                    приготовления и неповторимыми рецептами.</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 {% endblock %}

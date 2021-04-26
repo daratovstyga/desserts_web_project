@@ -2,11 +2,11 @@
 
 {% block content %}
 
-<h2>Акции</h2>
+<h1 style="font-family:Georgia, serif; color:#9b2261; text-align: center; margin-top: 30px; margin-bottom: 20px;">Действующие акции</h1>
 <div class="row" style="margin-left:20px;">
     {% for item in stocks%}
-    <div class="col-sm">
-        <div class="card" style="width: 18rem; height: 31rem;">
+    <div class="col-sm" style="margin-bottom: 30px;">
+        <div class="card" style="width: 18rem; height: 29rem;">
             <img src="{{item.img}}"
                  class="card-img-top" alt="...">
             <div class="card-body">
