@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Регистрация</h1>
-<form action="" method="post">
+<h2 style="font-family:Georgia, serif; color:#9b2261; margin-left: 25px; margin-top: 30px; margin-bottom: 20px;">Регистрация</h2>
+<form action="" method="post" style="margin-left: 30px;font-family:Georgia, serif; color:#212121;">
     {{ form.hidden_tag() }}
     <p>
         {{ form.email.label }}<br>
@@ -67,7 +67,7 @@
             </p>
         {% endfor %}
     </p>
-    <p>{{ form.submit(type="submit", class="btn btn-primary", style="background-color:#e0a3c3; border:1px solid #d175a5") }}</p>
+    <p >{{ form.submit(type="submit", class="btn btn-primary", style="background-color:#e0a3c3; border:1px solid #d175a5") }}</p>
     {{message}}
 </form>
 {% endblock %}
